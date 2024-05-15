@@ -34,6 +34,29 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- NeoTree
+vim.keymap.set('n', '<S-t>', ':NvimTreeToggle<CR>', { desc = 'Toglle neotree' })
+
+-- Trouble
+vim.keymap.set('n', '<leader>xx', function()
+  require('trouble').toggle()
+end, { desc = '' })
+vim.keymap.set('n', '<leader>xw', function()
+  require('trouble').toggle 'workspace_diagnostics'
+end)
+vim.keymap.set('n', '<leader>xd', function()
+  require('trouble').toggle 'document_diagnostics'
+end)
+vim.keymap.set('n', '<leader>xq', function()
+  require('trouble').toggle 'quickfix'
+end)
+vim.keymap.set('n', '<leader>xl', function()
+  require('trouble').toggle 'loclist'
+end)
+vim.keymap.set('n', 'gR', function()
+  require('trouble').toggle 'lsp_references'
+end)
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

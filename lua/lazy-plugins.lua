@@ -40,8 +40,6 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  -- require 'kickstart/plugins/tokyonight',
-
   require 'kickstart.plugins.catppuccin',
 
   require 'kickstart/plugins/todo-comments',
@@ -50,7 +48,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/treesitter',
 
-  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.nvim-tree',
 
   require 'kickstart.plugins.smooth-scroll',
 
@@ -64,7 +62,17 @@ require('lazy').setup({
 
   require 'kickstart.plugins.lualine',
 
-  require 'kickstart.plugins.barbar',
+  require 'kickstart.plugins.dressing',
+
+  require 'kickstart.plugins.bufferline',
+
+  require 'kickstart.plugins.nvim-highlight-colors',
+
+  require 'kickstart.plugins.nvim-scrollbar',
+
+  require 'kickstart.plugins.trouble',
+
+  require 'kickstart.plugins.nvim-lsp-file-operations',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -87,26 +95,6 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   -- { import = 'custom.plugins' },
-}, {
-  ui = {
-    -- If you are using a Nerd Font: set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
-    },
-  },
-})
+}, {})
 
 -- vim: ts=2 sts=2 sw=2 et

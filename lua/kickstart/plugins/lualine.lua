@@ -7,6 +7,7 @@ return {
         theme = 'catppuccin',
         component_separators = '',
         section_separators = { left = '', right = '' },
+        globalstatus = true,
       },
       sections = {
         lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
@@ -29,7 +30,9 @@ return {
         lualine_z = { 'location' },
       },
       tabline = {},
-      extensions = {},
+      extensions = {
+        'nvim-tree',
+      },
     }
   end,
 }
